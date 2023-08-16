@@ -46,12 +46,15 @@ async def flipcoin(ctx):
 
 @bot.command()
 async def gibberish(ctx, length=10):
-    result = random.choice([random_word(length), random_word(length), random_word(length), "E", "🦍"])
+    length = 4000 if length > 4000 else length
+    gibberish_list = [random_word(length), random_word(length), random_word(length), random_word(length), "E", "🦍"]
+    result = random.choice(gibberish_list)
     await ctx.send(result)
 
     if result == "E":
         await ctx.send("YOU HAVE ENCOUNTERED E")
     elif result == "🦍":
         await ctx.send("YOU HAVE ENCOUNTERED THE GORILLA")
+
 
 bot.run("MTEzODgxMzA1NDUzMjk5NzIzMg.GGhian.heTG_r2P2rQ_UDfC1gFkCzBHV1JtHhqP8Xn--Q")
