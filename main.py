@@ -23,11 +23,25 @@ async def on_message(message):
     elif message.content.startswith("$why"):
         await message.channel.send("I am just a test subject :(")
     elif message.content.startswith("$commands"):
-        await message.channel.send("Commands are: $halo, $bye, $what, $why, $flip-coin")
+        await message.channel.send("Commands are: $halo, $bye, $what, $why, $flip-coin, $gibberish")
     elif message.content.startswith("$flip-coin"):
         rand = random.randint(0, 1)
         result = "Heads" if rand == 0 else "Tails"
         await message.channel.send(result)
+    elif message.content.startswith("$gibberish"):
+        gibberish_list = ["djdjeo a[apdpe ododekoed] 6994797#7485943 )($&R983 djfhdjfhjrf)",
+                          "saofjkefjekfjefj",
+                          "ijfwiofu34 -04083499349034",
+                          "orfjkfjjrfjrf",
+                          "E",
+                          "🦍"]
+        result = random.choice(gibberish_list)
+        await message.channel.send(result)
+
+        if result == "E":
+            await message.channel.send("YOU HAVE ENCOUNTERED E")
+        elif result == "🦍":
+            await message.channel.send("YOU HAVE ENCOUNTERED THE GORILLA")
     else:
         await message.channel.send(message.content)
 
