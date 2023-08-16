@@ -1,10 +1,10 @@
 import random
 
-def gen_pass(pass_length):
-    elements = "+-/*!&$#?=@<>"
-    password = ""
+def random_word(length):
+    elements = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    generated = ""
 
-    for i in range(pass_length):
-        password += random.choice(elements)
+    for _ in range(length):
+        generated += random.choice(elements)
 
-    return password
+    return generated
