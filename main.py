@@ -11,31 +11,38 @@ bot = commands.Bot(command_prefix=";", intents=intents)
 async def on_ready():
     print(f'We have logged in as {bot.user}')
 
+
 @bot.command()
 async def hello(ctx):
     await ctx.send("Hello!")
+
 
 @bot.command()
 async def bye(ctx):
     await ctx.send("B-bye")
 
+
 @bot.command()
 async def what(ctx):
     await ctx.send("I'm a chatbot!")
+
 
 @bot.command()
 async def why(ctx):
     await ctx.send("I'm just a test subject :(")
 
+
 @bot.command()
 async def commands(ctx):
     await ctx.send("Commands are: ;halo, ;bye, ;what, ;why, ;flip-coin, ;gibberish, ;pop <amount>")
+
 
 @bot.command()
 async def flipcoin(ctx):
     rand = random.randint(0, 1)
     result = "Heads" if rand == 0 else "Tails"
     await ctx.send(result)
+
 
 @bot.command()
 async def gibberish(ctx, length=10):
