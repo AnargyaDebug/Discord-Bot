@@ -57,4 +57,4 @@ async def gibberish(ctx, length=10):
         await ctx.send("YOU HAVE ENCOUNTERED THE GORILLA")
 
 
-bot.run("MTEzODgxMzA1NDUzMjk5NzIzMg.GGhian.heTG_r2P2rQ_UDfC1gFkCzBHV1JtHhqP8Xn--Q")
+bot.run("NO")
